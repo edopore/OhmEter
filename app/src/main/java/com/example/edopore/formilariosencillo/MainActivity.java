@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView Tole, Valor;
     int n1, n2;
     double mult;
-    DecimalFormat format = new DecimalFormat("0.0");
+    DecimalFormat format = new DecimalFormat("0.00");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
