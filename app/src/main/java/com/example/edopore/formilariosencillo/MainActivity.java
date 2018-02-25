@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         n1 = 10;
         B2.setBackgroundColor(getResources().getColor(R.color.black));
         n2 = 0;
-        B3.setBackgroundColor(getResources().getColor(R.color.white));
+        B3.setBackgroundColor(getResources().getColor(R.color.red));
         mult = Math.pow(10, 2);
         B4.setBackgroundColor(getResources().getColor(R.color.gold));
         Tole.setText("±5%");
