@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OhmEter</string>
+    <string name="cal">Calcular</string>
+    <string name="Valore">El valor del resistor</string>
+    <string name="Tole">Tolerancia</string>
+    <string name="Hola">Bienvenido a OhmEter</string>
+    <string name="error">Por favor ingrese el código de colores</string>
+</resources>
