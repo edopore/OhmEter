@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int n1, n2;
     double mult;
     DecimalFormat format = new DecimalFormat("0.00");
+    DecimalFormat format2 = new DecimalFormat("0.0");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,11 +107,26 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, R.string.error, Toast.LENGTH_SHORT).show();
         } else {
             Resultado = (num1 + num2) * num3;
-            if (Resultado < 1000) {
+            if (Resultado < 1) {
+                if (Resultado == 0.1 || Resultado == 0.2 || Resultado == 0.3 || Resultado == 0.4 || Resultado == 0.5 || Resultado == 0.6 || Resultado == 0.7 || Resultado == 0.8 || Resultado == 0.9) {
+                    Valor.setText(String.valueOf(format2.format(Resultado) + "Ω"));
+                } else {
+                    Valor.setText(String.valueOf(format.format(Resultado) + "Ω"));
+
+                }
+            }
+            if (Resultado >= 1 && Resultado < 10) {
                 if (Resultado - Math.floor(Resultado) == 0) {
                     Valor.setText(String.valueOf((int) Resultado) + "Ω");
                 } else {
-                    Valor.setText(String.valueOf(format.format(Resultado) + "Ω"));
+                    Valor.setText(String.valueOf(format2.format(Resultado) + "Ω"));
+                }
+            }
+            if (Resultado >= 10 && Resultado < 1000) {
+                if (Resultado - Math.floor(Resultado) == 0) {
+                    Valor.setText(String.valueOf((int) Resultado) + "Ω");
+                } else {
+                    Valor.setText(String.valueOf(format2.format(Resultado) + "Ω"));
                 }
             }
             if (Resultado >= 1000 && Resultado < 10000) {
@@ -118,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "KΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "KΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "KΩ");
                 }
             }
             if (Resultado >= 10000 && Resultado < 100000) {
@@ -126,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "KΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "KΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "KΩ");
                 }
             }
             if (Resultado >= 100000 && Resultado < 1000000) {
@@ -134,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "KΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "KΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "KΩ");
                 }
             }
             if (Resultado >= 1000000 && Resultado < 10000000) {
@@ -142,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "MΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "MΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "MΩ");
                 }
             }
             if (Resultado >= 10000000 && Resultado < 100000000) {
@@ -150,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "MΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "MΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "MΩ");
                 }
             }
             if (Resultado >= 100000000 && Resultado < 1000000000) {
@@ -158,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "MΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "MΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "MΩ");
                 }
             }
             if (Resultado >= 1000000000 && Resultado < 1000000000) {
@@ -166,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "GΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "GΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "GΩ");
                 }
             }
             if (Resultado >= 1000000000) {
@@ -174,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 if (div - Math.floor(div) == 0) {
                     Valor.setText(String.valueOf((int) div) + "GΩ");
                 } else {
-                    Valor.setText(String.valueOf(format.format(div)) + "GΩ");
+                    Valor.setText(String.valueOf(format2.format(div)) + "GΩ");
                 }
             }
         }
